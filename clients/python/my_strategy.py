@@ -35,7 +35,7 @@ class MyStrategy:
         if target_pos.x < unit.position.x and game.level.tiles[int(unit.position.x - 1)][int(unit.position.y)] == model.Tile.WALL:
             jump = True
         return model.UnitAction(
-            velocity=target_pos.x - unit.position.x,
+            velocity=(target_pos.x - unit.position.x)*100,
             jump=jump,
             jump_down=not jump,
             aim=aim,
